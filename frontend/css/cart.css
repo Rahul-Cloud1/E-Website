@@ -1,0 +1,172 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #2c3e50;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+nav a {
+    color: #ecf0f1;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Main Styles */
+.cart-items {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.cart-items:hover {
+    transform: translateY(-2px);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.item-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #f1f1f1;
+}
+
+.quantity-input:focus {
+    border-color: #3498db;
+    background-color: #fff;
+}
+
+/* Button Styles */
+.remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.checkout-section {
+    margin-top: 20px;
+    text-align: right;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.total-price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.checkout-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

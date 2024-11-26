@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s, left 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+.icon {
+    width: 24px;
+    vertical-align: middle;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: url('../images/banner.jpg') no-repeat center center/cover;
+    margin-top: 70px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+}
+
+.banner:hover::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.banner-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.banner-text h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.banner-text p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    background-color: #f0a500;
+    color: #fff;
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-5px);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    position: absolute;
+    margin-top: -290px;
+    z-index: 2;
+    color: wheat;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 260px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.3s;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.product-price {
+    color: #f0a500;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.buy-now {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+.buy-now:hover {
+    background-color: #f0a500;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: 157px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-icon {
+    width: 20px;
+    margin-left: 10px;
+}

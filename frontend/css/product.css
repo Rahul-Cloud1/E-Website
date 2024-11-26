@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #e8f0f2;
+}
+
+.header-container {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-container .logo {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+nav a:hover,
+nav .active {
+    background-color: #3498db;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product-item:hover img {
+    transform: scale(1.1);
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.buy-now {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buy-now:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.footer-container {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 0%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
